@@ -1,0 +1,432 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --border-radius: 1rem;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Handsontable Dark Theme Customizations */
+.htDark.handsontable {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  border-color: hsl(var(--border));
+}
+
+.htDark .handsontable table {
+  border-color: hsl(var(--border));
+}
+
+.htDark .handsontable td {
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  border-color: hsl(var(--border));
+}
+
+.htDark .handsontable th {
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+  border-color: hsl(var(--border));
+  font-weight: 500;
+}
+
+.htDark .handsontable td.area {
+  background-color: hsl(var(--accent));
+}
+
+.htDark .handsontable td.current {
+  background-color: hsl(var(--primary) / 0.1);
+}
+
+.htDark .handsontable .wtBorder {
+  border-color: hsl(var(--primary));
+}
+
+.htDark .handsontable .htContextMenu {
+  background-color: hsl(var(--popover));
+  border-color: hsl(var(--border));
+  color: hsl(var(--popover-foreground));
+}
+
+.htDark .handsontable .htContextMenu tbody td {
+  background-color: hsl(var(--popover));
+  color: hsl(var(--popover-foreground));
+}
+
+.htDark .handsontable .htContextMenu tbody td:hover {
+  background-color: hsl(var(--accent));
+}
+
+.htDark .handsontable .htDropdownMenu {
+  background-color: hsl(var(--popover));
+  border-color: hsl(var(--border));
+}
+
+.htDark .handsontable .htDropdownMenu .htUIButton {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  border-color: hsl(var(--border));
+}
+
+.htDark .handsontable .htDropdownMenu .htUIButton:hover {
+  background-color: hsl(var(--accent));
+}
+
+.htDark .handsontable .htFiltersConditionsMenu {
+  background-color: hsl(var(--popover));
+  border-color: hsl(var(--border));
+}
+
+.htDark .handsontable .changeType {
+  background-color: hsl(var(--popover));
+  border-color: hsl(var(--border));
+  color: hsl(var(--popover-foreground));
+}
+
+.htDark .handsontable .htSearchText {
+  background-color: hsl(var(--input));
+  color: hsl(var(--foreground));
+  border-color: hsl(var(--border));
+}
+
+.htDark .handsontable .manualColumnResizer {
+  background-color: hsl(var(--primary));
+}
+
+.htDark .handsontable .manualRowResizer {
+  background-color: hsl(var(--primary));
+}
+
+.htDark .handsontable .wtBorder.current {
+  border-color: hsl(var(--primary));
+}
+
+.htDark .handsontable .wtBorder.area {
+  border-color: hsl(var(--primary) / 0.5);
+}
+
+.htDark .handsontable .htCommentTextArea {
+  background-color: hsl(var(--popover));
+  color: hsl(var(--popover-foreground));
+  border-color: hsl(var(--border));
+}
+
+/* Custom Scrollbar Styles for Dark Theme - More specific selectors */
+.custom-scrollbar,
+.custom-scrollbar * {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) rgba(0, 0, 0, 0.1);
+}
+
+.custom-scrollbar::-webkit-scrollbar,
+.custom-scrollbar *::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track,
+.custom-scrollbar *::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb,
+.custom-scrollbar *::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 7px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  min-height: 30px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover,
+.custom-scrollbar *::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:active,
+.custom-scrollbar *::-webkit-scrollbar-thumb:active {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.custom-scrollbar::-webkit-scrollbar-corner,
+.custom-scrollbar *::-webkit-scrollbar-corner {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Force scrollbar visibility */
+.custom-scrollbar::-webkit-scrollbar {
+  -webkit-appearance: none !important;
+  display: block !important;
+}
+
+/* Global scrollbar override for dark theme */
+body.dark,
+html.dark,
+.dark {
+  scrollbar-width: thin;
+  scrollbar-color: #404040 #1a1a1a;
+}
+
+/* Force visible scrollbars globally */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #404040 #1a1a1a;
+}
+
+*::-webkit-scrollbar {
+  width: 12px !important;
+  height: 12px !important;
+  display: block !important;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1a1a1a !important;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #404040 !important;
+  border-radius: 6px !important;
+  border: 2px solid #1a1a1a !important;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #555555 !important;
+}
+
+*::-webkit-scrollbar-corner {
+  background: #1a1a1a !important;
+}
+
+/* Specific overrides for custom-scrollbar */
+.dark .custom-scrollbar::-webkit-scrollbar-track,
+.dark .custom-scrollbar *::-webkit-scrollbar-track {
+  background: #1a1a1a !important;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb,
+.dark .custom-scrollbar *::-webkit-scrollbar-thumb {
+  background: #404040 !important;
+  border: 2px solid #1a1a1a !important;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover,
+.dark .custom-scrollbar *::-webkit-scrollbar-thumb:hover {
+  background: #555555 !important;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-corner,
+.dark .custom-scrollbar *::-webkit-scrollbar-corner {
+  background: #1a1a1a !important;
+}
+
+/* Optimized table styling for smooth scrolling */
+.spreadsheet-table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.spreadsheet-table td,
+.spreadsheet-table th {
+  box-sizing: border-box;
+  vertical-align: middle;
+  position: relative;
+}
+
+.spreadsheet-table tbody tr {
+  height: 40px;
+  will-change: transform;
+}
+
+.spreadsheet-table thead tr {
+  height: 48px;
+}
+
+/* Force container dimensions */
+.table-container {
+  min-height: 0;
+  flex: 1;
+  contain: layout style;
+}
+
+/* Performance optimizations */
+.spreadsheet-table input {
+  will-change: contents;
+}
+
+/* Remove smooth scrolling as it causes stuttering */
+.overflow-auto {
+  -webkit-overflow-scrolling: touch;
+  /* Removed scroll-behavior: smooth - causes stuttering */
+}
+
+/* Reduce repaints during scroll */
+.spreadsheet-table tbody {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Chat window animations */
+@keyframes slideInFromButton {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translate(20px, 20px);
+  }
+  70% {
+    transform: scale(1.05) translate(-2px, -2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-slide-in {
+  animation: fadeSlideIn 0.3s ease-out forwards;
+}
+
+/* Chat message animations */
+.chat-message-enter {
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Thin light black scrollbar styling - High specificity to override other styles */
+.thin-black-scrollbar,
+.thin-black-scrollbar * {
+  scrollbar-width: thin !important;
+  scrollbar-color: #444444 transparent !important;
+}
+
+.thin-black-scrollbar::-webkit-scrollbar,
+.thin-black-scrollbar *::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
+  background: transparent !important;
+  -webkit-appearance: none !important;
+}
+
+.thin-black-scrollbar::-webkit-scrollbar-track,
+.thin-black-scrollbar *::-webkit-scrollbar-track {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.thin-black-scrollbar::-webkit-scrollbar-thumb,
+.thin-black-scrollbar *::-webkit-scrollbar-thumb {
+  background: #444444 !important;
+  border-radius: 4px !important;
+  border: none !important;
+  min-height: 20px !important;
+  -webkit-appearance: none !important;
+}
+
+.thin-black-scrollbar::-webkit-scrollbar-thumb:hover,
+.thin-black-scrollbar *::-webkit-scrollbar-thumb:hover {
+  background: #555555 !important;
+}
+
+.thin-black-scrollbar::-webkit-scrollbar-corner,
+.thin-black-scrollbar *::-webkit-scrollbar-corner {
+  background: transparent !important;
+}
