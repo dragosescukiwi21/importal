@@ -1,20 +1,16 @@
 {
   "name": "csv-import-js",
   "version": "1.0.14",
-  "description": "Open-source CSV and XLS/XLSX file importer for React and JavaScript",
+  "description": "CSVimportal",
   "main": "index.js",
   "files": ["."],
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tableflowhq/csv-import.git"
+    "type": "git"
   },
   "keywords": ["csv", "import", "excel", "data", "importer", "react", "tableflow", "csv-import"],
   "author": "TableFlow",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/tableflowhq/csv-import/issues"
-  },
-  "homepage": "https://github.com/tableflowhq/csv-import#readme",
+
   "types": "index.d.ts",
   "peerDependencies": {
     "react": ">=18.0.0",

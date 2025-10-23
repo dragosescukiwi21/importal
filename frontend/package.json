@@ -8,8 +8,7 @@
     "build"
   ],
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tableflowhq/csv-import.git"
+    "type": "git"
   },
   "keywords": [
     "csv",
@@ -23,10 +22,6 @@
   ],
   "author": "TableFlow",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/tableflowhq/csv-import/issues"
-  },
-  "homepage": "https://github.com/tableflowhq/csv-import#readme",
   "types": "build/index.d.ts",
   "scripts": {
     "build:js": "rollup --config rollup.config-js.js && cp package-js.json build/package.json",
