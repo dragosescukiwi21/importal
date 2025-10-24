@@ -1,12 +1,12 @@
 # Importal
 
-> **A lightweight yet powerful tool for file validations**
+**A lightweight yet powerful tool for file validations**
 
 Importal is a comprehensive solution for handling user data imports. Built for developers who need reliable CSV and Excel processing, it provides intelligent column mapping, real-time validation, and automated conflict resolution—delivering clean, validated data to your systems.
 
 ## 🎥 See it work
 
-https://github.com/user-attachments/assets/exposition-demo.mp4
+https://github.com/user-attachments/assets/e832966f-82f7-4504-8217-14d2d18bba31
 
 ## What features make Importal stand out?
 
